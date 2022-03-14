@@ -1,0 +1,30 @@
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-red "></text> 远程探望记录(点击图片放大查看)
+    </view>
+  </view>
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> {{patient_id}}——{{patient_bednum}}——{{name}}
+    </view>
+  </view>
+  <view class="cu-list menu-avatar">
+    <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{visit_record}}" wx:key id="{{index}}" bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}" bindtap="clickimage">
+        <image class="cu-avatar round lg" src = "{{item.Visitor_PhotoPath}}"> </image>
+      <view class="content">
+        <view class="text-grey">{{item.Visitor_Name}}—{{item.Visitor_ID}}</view>
+        <view class="text-gray text-sm">
+          <text class="cuIcon-infofill text-red"></text>联系方式：{{item.Visitor_Phone}}</view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">{{item.Visitor_Date}}</view>
+        <view class="cu-tag round bg-grey sm">{{item.Visitor_Time}}</view>
+      </view>
+      <view class="move">
+        <view class="bg-grey">置顶</view>
+        <view class="bg-red">删除</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

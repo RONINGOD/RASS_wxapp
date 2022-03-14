@@ -1,0 +1,25 @@
+<!--pages/bell/index.wxml-->
+<!-- <text>pages/bell/index.wxml</text> -->
+
+
+<view class="waitingbell" hover-class="none" hover-stop-propagation="false">
+    <!-- <image class="bell" scr="https://img1.baidu.com/it/u=1014252970,3486784583&fm=253&fmt=auto&app=138&f=JPEG?w=700&h=485" mode="widthFix"></image> -->
+    <image class="bell" src="{{img}}" mode="widthFix" >
+    </image>
+</view>
+
+
+<view class="daojishi" hover-class="none" hover-stop-propagation="false">
+    
+    <view class="d_contect" hover-class="none" hover-stop-propagation="false">
+        <van-count-down use-slot time="{{ time }}" bind:change="onChange">
+            <text class="item">{{ timeData.minutes }}</text>
+            <text class="item_maohao">:</text>
+            <text class="item">{{ timeData.seconds }}</text>
+          </van-count-down>
+    </view>
+    
+</view>
+
+
+

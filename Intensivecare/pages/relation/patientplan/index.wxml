@@ -1,0 +1,142 @@
+<!--pages/nurse/patientplan/index.wxml-->
+<!-- <text>pages/nurse/patientplan/index.wxml</text> -->
+<view class="record">
+    <view class="plan_title">
+        基础信息
+    </view>
+      
+    <van-cell-group>
+    <!-- 姓名，科别，病历号，床号，进入ICU时间，
+    体温，脉搏，心率，血压，呼吸，供养方式，呼吸机工作模式，翻身体位，
+    各种管道情况，执行医嘱和给药情况，治理和护理的措施及效果 -->
+    
+    <!-- !!!!变量名还未处理 -->
+  <van-field
+    model:value="{{ username }}"
+    label="名字"
+    readonly
+    placeholder="请输入病人姓名"
+  />
+
+  <van-field
+    model:value="{{ patient_id }}"
+    type="number"
+    label="病历号"
+    placeholder="请输入病历号"
+    readonly
+    readonly
+    border="{{ false }}"
+  />
+   <van-field
+    model:value="{{ keshi }}"
+    readonly
+    label="科室"
+    placeholder="请输入病人科室"
+    name="keshi"
+  />
+
+  <van-field
+    model:value="{{ bed_id }}"
+    type="number"
+    label="床号"
+    placeholder="请输入床号"
+    readonly
+    border="{{ false }}"
+  />
+
+  <van-field
+    model:value="{{ time }}"
+    label="进入ICU时间"
+    placeholder="请输入进入ICU时间"
+    readonly
+  />
+</van-cell-group>
+
+
+<view class="plan_title">
+        体征信息
+</view>
+      
+    <van-cell-group>
+    <!-- 姓名，科别，病历号，床号，进入ICU时间，
+    体温，脉搏，心率，血压，呼吸机工作模式，翻身体位，
+    各种管道情况，执行医嘱和给药情况，治理和护理的措施及效果 -->
+  <van-field
+    model:value="{{ tiwen }}"
+    label="体温"
+    placeholder="请输入体温"
+    readonly
+  />
+
+  <van-field
+    model:value="{{ maibo }}"
+    label="脉搏"
+    placeholder="请输入脉搏"
+    readonly
+  />
+   <van-field
+    model:value="{{ xinlv }}"
+    label="心率"
+    placeholder="请输入心率"
+    readonly
+  />
+
+  <van-field
+    model:value="{{ xueya }}"
+    label="血压"
+    placeholder="请输入血压"
+    readonly
+  />
+  <van-field
+    model:value="{{ huxiji }}"
+    label="呼吸机模式"
+    readonly
+    placeholder="请输入呼吸机工作模式"
+  />
+   <van-field
+    model:value="{{ fanshen }}"
+    label="翻身体位"
+    placeholder="请输入翻身体位"
+    readonly
+  />
+</van-cell-group>
+
+<view class="plan_title">
+        详细情况
+</view>
+      
+    <van-cell-group>
+    <!-- 基础信息：姓名，科别，病历号，床号，进入ICU时间，
+    体征信息：体温，脉搏，心率，血压，呼吸机工作模式，翻身体位，
+    详细情况：各种管道情况，执行医嘱和给药情况，护理措施及效果 -->
+  <van-field
+    model:value="{{ guandao }}"
+    label="各种管道情况"
+    placeholder="请输入各种管道情况"
+    type="textarea"
+    readonly
+    autosize
+  />
+
+  <van-field
+    model:value="{{ yizhu }}"
+    label="执行医嘱"
+    placeholder="请输入执行医嘱和给药情况"
+     type="textarea"
+     readonly
+    autosize
+  />
+   <van-field
+    model:value="{{ cuoshi }}"
+    label="护理措施"
+    placeholder="请输入治理和护理的措施及效果"
+    type="textarea"
+    readonly
+    autosize
+  />
+</van-cell-group>
+</view>
+
+
+
+  

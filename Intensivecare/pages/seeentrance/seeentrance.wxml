@@ -1,0 +1,73 @@
+<form bindsubmit="seepatient">
+    <view class="cu-bar bg-white solid-bottom">
+        <view class="action">
+        <text class="cuIcon-title text-blue"></text>远程探望登记
+        </view>
+    </view>
+	<view class="cu-form-group">
+		<view class="title">病历号</view>
+		<input placeholder="输入病历号" name="patient_id"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				示例：
+			</view>
+			<view class="cu-tag line-blue">
+				P2022020900
+			</view>
+		</view>
+	</view>
+    <view class="cu-form-group margin-top">
+		<view class="title">密码</view>
+		<input placeholder="请输入对应的密码" password="true" name="patient_pwd"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">时间选择</view>
+		<picker mode="time" value="{{time}}" start="09:00" end="21:00" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">日期选择</view>
+		<picker mode="date" value="{{date}}" start="2022-02-01" end="2025-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+	<view class="cu-bar bg-white margin-top">
+		<view class="action">
+			人脸拍照留证
+		</view>
+		<view class="action">
+			{{imgList.length}}/1
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+	<!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+    <view class="weui-form__opr-area" >
+        <button class="loginBtn" type="primary" form-type="submit">登记</button>
+    </view>
+    <view class="weui-form__extra-area">
+        <view class="weui-footer">
+            <view class="weui-footer__links">
+                <navigator url="javascript:" class="weui-footer__link">规定须知</navigator>
+            </view>
+            <view class="weui-footer__text">Nightgale © 2022</view>
+        </view>
+    </view>
+</form>
+<!-- <image src = "cloud://cloud1-7g37q754c81063a2.636c-cloud1-7g37q754c81063a2-1308249568/1646830536463.png"></image> -->

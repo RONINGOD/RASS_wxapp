@@ -1,0 +1,117 @@
+<scroll-view scroll-x class="bg-white nav text-center fixed" style="top:{{CustomBar}}px">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+    {{tabNav[index]}}
+  </view>
+</scroll-view>
+<block wx:if="{{TabCur==0}}">
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>{{patient_id}}——{{patient_bednum}}
+    </view>
+  </view>
+  <view >
+ <video style="width: 100%;height:400rpx;margin:1rpx 1rpx;" src="cloud://cloud1-7g37q754c81063a2.636c-cloud1-7g37q754c81063a2-1308249568/video/202203131442_x264.mp4" binderror="videoErrorCallback"></video>
+</view>
+<view class="cu-bar bg-white">
+    <view class="action">
+      <text class="cuIcon-titles text-green"></text>
+      <text class="text-xl text-bold">RASS镇静评分：{{score}}</text>
+    </view>
+  </view>
+<view class="daohanglan" >
+    <van-grid column-num="3" square gutter="{{ 10 }}">
+        <!-- <van-grid-item icon="photo-o" text="文字" wx:for="{{ 6 }}" /> -->
+
+    <van-grid-item 
+      icon="records"
+      icon-color="#F60018"
+      link-type="navigateTo"
+      url="/pages/visitrecord/visitrecord"
+      text="探望记录"
+      >
+    </van-grid-item> 
+
+    <van-grid-item
+      icon="comment"
+      icon-color="#34D0BA"
+      link-type="navigateTo"
+      url="/pages/chat/index"
+      text="沟通"
+    />
+    <van-grid-item
+      icon="todo-list"
+      icon-color="#FF6A00"
+      link-type="navigateTo"
+      url="/pages/nursedrug/nursedrug"
+      text="用药日志"
+    />
+    <van-grid-item
+      icon="invitation"
+      icon-color="#25D500"
+      link-type="navigateTo"
+      url="/pages/nurse/patientplan/index"
+      text="治疗计划"
+    />
+    </van-grid>
+</view>
+</block>
+<block wx:if="{{TabCur==1}}">
+  <view class="cu-bar bg-white margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>病床号
+    </view>
+  </view>
+  <view class="container">
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler"></canvas>
+    <view class="cu-bar bg-gray margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-red"></text>滑动图表查看患者24小时体温记录
+    </view>
+  </view>
+</view>
+</block>
+<block wx:if="{{TabCur==2}}">
+  <view class="cu-bar bg-white margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>病床号
+    </view>
+  </view>
+  <view class="container">
+    <canvas canvas-id="lineCanvas2" disable-scroll="true" class="canvas" bindtouchstart="touchHandler2" bindtouchmove="moveHandler2" bindtouchend="touchEndHandler2"></canvas>
+    <view class="cu-bar bg-gray margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-red"></text>滑动图表查看患者24小时血压记录
+    </view>
+  </view>
+</view>
+</block>
+<block wx:if="{{TabCur==3}}">
+  <view class="cu-bar bg-white margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>病床号
+    </view>
+  </view>
+  <view class="container">
+    <canvas canvas-id="lineCanvas3" disable-scroll="true" class="canvas" bindtouchstart="touchHandler3" bindtouchmove="moveHandler3" bindtouchend="touchEndHandler3"></canvas>
+    <view class="cu-bar bg-gray margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-red"></text>滑动图表查看患者24小时心率记录
+    </view>
+  </view>
+</view>
+</block>
+<block wx:if="{{TabCur==4}}">
+  <view class="cu-bar bg-white margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>病床号
+    </view>
+  </view>
+  <view class="container">
+    <canvas canvas-id="lineCanvas4" disable-scroll="true" class="canvas" bindtouchstart="touchHandler4" bindtouchmove="moveHandler4" bindtouchend="touchEndHandler4"></canvas>
+    <view class="cu-bar bg-gray margin-top solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-red"></text>滑动图表查看患者24小时呼吸频率记录
+    </view>
+  </view>
+</view>
+</block>

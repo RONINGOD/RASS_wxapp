@@ -1,0 +1,14 @@
+/* pages/nurse/patientplan/index.wxss */
+/* .navtitle{ */
+    /* color: aqua !important; */
+    /* font-size: 50rpx; */
+    /* margin-top: 50rpx; */
+/* } */
+
+
+.plan_title{
+    color: rgb(140,153,160);
+    margin-top: 20rpx;
+    margin-bottom: 10rpx;
+    text-align: center;
+}

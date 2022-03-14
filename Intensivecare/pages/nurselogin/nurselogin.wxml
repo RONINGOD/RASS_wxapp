@@ -1,0 +1,42 @@
+<page-meta root-font-size="system"/>
+<view class="page" data-weui-theme="{{theme}}" data-weui-mode="{{mode}}">
+    <form bindsubmit="login">
+        <view class="weui-form">
+            <view class="weui-form__text-area">
+                <h2 class="weui-form__title">医护人员登录</h2>
+            </view>
+            <view class="weui-form__control-area">
+                <view class="weui-cells__group weui-cells__group_form">
+                    <view class="weui-cells__title">仅用于医护人员登录</view>
+                    <view class="weui-cells">
+                        <view class="weui-cell weui-cell_active">
+                            <view class="weui-cell__hd"><label class="weui-label">账号</label></view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="填写本人分配的账号" placeholder-class="weui-input__placeholder" name='ID'/>
+                            </view>
+                        </view>
+                        <view class="weui-cell weui-cell_active">
+                            <view class="weui-cell__hd">
+                                <label class="weui-label">密码</label>
+                            </view>
+                            <view class="weui-cell__bd">
+                                <input class="weui-input" placeholder="填写分配账号的密码" placeholder-class="weui-input__placeholder" name='password' password="true"/>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-form__opr-area" >
+                <button class="loginBtn" type="primary" form-type="submit">登录</button>
+            </view>
+            <view class="weui-form__extra-area">
+                <view class="weui-footer">
+                    <view class="weui-footer__links">
+                        <navigator url="javascript:" class="weui-footer__link">规定须知</navigator>
+                    </view>
+                    <view class="weui-footer__text">Nightgale © 2022</view>
+                </view>
+            </view>
+        </view>
+    </form>
+</view>

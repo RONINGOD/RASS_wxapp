@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/chooselogin/chooselogin",
+        "pages/nurse/patientplan/index",
+        "pages/patient/patientplan/index",
+        "pages/relation/patientplan/index",
+        "pages/relation/drug/index",
+        "pages/patient/drug/index",
+        "pages/nursedrug/nursedrug",
+        "pages/nursesee/nursesee",
+        "pages/patient/index",
+        "pages/chat/index",
+        "pages/seepatient/seepatient",
+        "pages/relationlogin/relationlogin",
+        "pages/seeentrance/seeentrance",
+        "pages/visitrecord/visitrecord",
+        "pages/nurse/choosebednum/choosebednum",
+        "pages/bell/index",
+        "pages/patientlogin/patientlogin",
+        "pages/nurselogin/nurselogin"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#6699CC",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "智慧重症监护系统",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh":false  
+    },
+    "usingComponents": {
+        "van-swipe-cell": "./dist/swipe-cell/index",
+        "van-dialog": "./dist/dialog/index",
+        "van-notify": "./dist/notify/index"
+    },      
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "debug": true,
+    "cloud": true,
+    "lazyCodeLoading": "requiredComponents"
+}

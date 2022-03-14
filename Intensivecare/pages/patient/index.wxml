@@ -1,0 +1,99 @@
+
+<!-- <text>pages/patient/index.wxml</text>
+<van-button type="primary">按钮</van-button>
+<van-button color="linear-gradient(to right, #4bb0ff, #6149f6)">
+    渐变色按钮
+  </van-button> -->
+
+
+
+<!-- <van-grid clickable column-num="4">
+    <van-grid-item
+      icon="home-o"
+      link-type="navigateTo"
+      url="/pages/index/index"
+      text="Navigate 跳转"
+    />
+    <van-grid-item
+      icon="search"
+      link-type="reLaunch"
+      url="/pages/index/index"
+      text="ReLaunch 跳转"
+    />
+    <van-grid-item
+      icon="home-o"
+      link-type="navigateTo"
+      url="/pages/index/index"
+      text="Navigate 跳转"
+    />
+    <van-grid-item
+      icon="search"
+      link-type="reLaunch"
+      url="/pages/index/index"
+      text="ReLaunch 跳转"
+    />
+  </van-grid> -->
+
+  
+
+<view class="swiper">
+    <Swiper imgUrls="{{imgUrls}}"/>  
+</view>
+
+
+<!-- 导航卡 -->
+<view class="daohanglan" >
+    <van-grid column-num="3" square gutter="{{ 10 }}">
+        <!-- <van-grid-item icon="photo-o" text="文字" wx:for="{{ 6 }}" /> -->
+    <van-grid-item 
+      icon="bell"
+      icon-color="#F60018"
+      link-type="navigateTo"
+      url="/pages/bell/index"
+      text="按铃"
+      >
+      <!-- <text class="iconfont icon-fenshu">
+          按铃
+      </text> -->
+    </van-grid-item> 
+
+    <van-grid-item
+      icon="comment"
+      icon-color="#34D0BA"
+      link-type="navigateTo"
+      url="/pages/chat/index"
+      text="沟通"
+    />
+    <van-grid-item
+      icon="todo-list"
+      icon-color="#FF6A00"
+      link-type="navigateTo"
+      url="/pages/patient/drug/index"
+      text="用药日志"
+    />
+    <van-grid-item
+      icon="invitation"
+      icon-color="#25D500"
+      link-type="navigateTo"
+      url="/pages/patient/patientplan/index"
+      text="治疗计划"
+    />
+    </van-grid>
+</view>
+
+<!-- <view class="" >
+//第三方图标测试
+    <van-icon class-prefix="my-icon" name="extra" />    
+    <van-icon class-prefix="icon" name="fuwurizhi" />
+
+    <text class="" selectable="false" space="false" decode="false">
+        测试
+    </text>
+</view> -->
+
+
+  
+
+
+
+ 

@@ -1,0 +1,74 @@
+
+
+<view class="toplick">
+    <van-nav-bar
+    right-text="提交"
+    bind:click-right="onClickRight"
+    title-class="navtitle"
+    />
+</view>
+
+<view class="record">
+
+    <view class="plan_title">
+        护理信息
+    </view>
+    <!-- 今日已用药，今日未用药，今日输液 -->
+      <!-- 床上擦浴，翻身排背，口腔护理，胃肠减压 -->
+    <van-cell-group>
+    
+    <!-- !!!!变量名还未处理 -->
+   <van-field
+    model:value="{{ cayu }}"
+    label="床上擦浴"
+    placeholder="是否需要床上擦浴？"
+  />
+
+  <van-field
+    model:value="{{ fanbei }}"
+    label="翻身排背"
+    placeholder="是否需要翻身排背？"
+  />
+   <van-field
+    model:value="{{ huli }}"
+    label="口腔护理"
+    placeholder="是否需要口腔护理？"
+  />
+
+  <van-field
+    model:value="{{ jianya }}"
+    label="胃肠减压"
+    placeholder="是否需要胃肠减压？"
+  />
+    </van-cell-group>
+
+
+<view class="plan_title">
+        用药信息
+</view>
+      
+    <van-cell-group>
+
+  <van-field
+    model:value="{{ used }}"
+    label="今日已用药"
+    placeholder="今日已用药品"
+  />
+
+  <van-field
+    model:value="{{ unused }}"
+    label="今日未用药"
+    placeholder="今日未用药品"
+  />
+   <van-field
+    model:value="{{ waituse }}"
+    label="今日待输液"
+    placeholder="今日待输液"
+  />
+</van-cell-group>
+</view>
+  
+
+
+
+  
